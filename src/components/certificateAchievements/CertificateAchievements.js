@@ -1,5 +1,5 @@
-import Typist from "react-typist";
-import {Avatar, Button, Chip, Divider, Grid, Hidden} from "@material-ui/core";
+
+import { Button, Divider, Grid, Hidden} from "@material-ui/core";
 import {Link} from "react-router-dom";
 import {makeStyles} from "@material-ui/core/styles";
 import CertificateCard from "./CertificateCard";
@@ -60,7 +60,7 @@ const CertificateAchievements = () => {
                     <br/>
                     <Divider/>
                     <br/> <br/>
-                    <img src={data[index].src} width='100%' height={'60%'} style={{cursor:'pointer'}}
+                    <img alt={data[index].title} src={data[index].src} width='100%' height={'60%'} style={{cursor:'pointer'}}
                          onClick={() => setIndex(index >= data.length-1? index: index+1)}/>
                 </Grid>
             </Grid>

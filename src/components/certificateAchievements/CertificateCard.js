@@ -5,7 +5,7 @@ const CertificateCard = ({classes, title, src, setIndex, index}) => {
     return (
         <div className={classes.card} onClick={() => setIndex(index)}>
             <h3>{title}</h3>
-            <img src={src} width="100%"/>
+            <img src={src} width="100%" alt={title}/>
             <Divider/>
         </div>
     )
