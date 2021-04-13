@@ -56,11 +56,10 @@ const Welcome = ({cursor}) => {
                 <br/>
                 Kurt Lupin Orioque
                 <br/>
-                <span><b>FullStack Developer</b></span>
+                <span>FullStack Developer</span>
             </Typist>
 
             <br/>
-            <Divider style={{width: '100%', backgroundColor: 'white'}}/>
             <br/>
             <div className={classes.buttonContainer}>
                 <Link to={"/skill"} className={classes.link}>
@@ -103,6 +102,17 @@ const Welcome = ({cursor}) => {
                         color="primary"
                     />
                 </Link>
+
+
+                <a href='https://drive.google.com/file/d/1PXS-3LDAwiwd9iKdPSf6TSgtC_AAY1H6/view?usp=sharing' className={classes.link}>
+                    <Chip
+                        className={classes.chip}
+                        avatar={<Avatar>P</Avatar>}
+                        label="Download My CV"
+                        clickable
+                        color="primary"
+                    />
+                </a>
 
 
             </div>
