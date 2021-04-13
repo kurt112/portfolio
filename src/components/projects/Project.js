@@ -1,10 +1,10 @@
-
 import {Button, Divider, Grid, Hidden} from "@material-ui/core";
 import {Link} from "react-router-dom";
 import {makeStyles} from "@material-ui/core/styles"
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import data from './ProjectData'
 import ProjectCard from "./ProjectCard";
+
 const useStyles = makeStyles((theme) => ({
     root: {
         height: '100%',
@@ -37,6 +37,24 @@ const useStyles = makeStyles((theme) => ({
 const Project = () => {
     const classes = useStyles()
     const [index, setIndex] = useState(0)
+    const [video, setVideo] = useState([])
+
+    useEffect(() => {
+        const temp = video
+
+        data.map((e, index) => temp.push(
+                <video  key={index} width='100%' width='100%' height={'80%'} controls>
+                    <source src={e.src} type="video/mp4"/>
+                </video>
+            )
+        )
+
+        setVideo([...temp])
+
+        console.log(temp)
+    }, [])
+
+    console.log(video)
 
     return (
         <div className={classes.root}>
@@ -44,25 +62,27 @@ const Project = () => {
                 <Hidden smDown>
                     <Grid item md={2} className={classes.side}>
                         {
-                            data.map((e,i) => <ProjectCard
+                            data.map((e, i) => <ProjectCard
                                 setIndex={setIndex}
                                 index={i}
                                 src={e.src}
                                 title={e.title}
-                                classes={classes}/>)
+                                classes={classes}
+                                key={i}
+                            />)
                         }
                     </Grid>
                 </Hidden>
                 <Grid item md={10} sm={10} className={classes.middle}>
-                    <Link to="/" style={{textDecoration:'none'}}>
+                    <Link to="/" style={{textDecoration: 'none'}}>
                         <Button color={"primary"} variant={"contained"} disableElevation>Back</Button>
                     </Link>
                     <br/>
                     <Divider/>
                     <br/> <br/>
-                    <video width='100%' width='100%' height={'80%'} controls>
-                        <source src={data[index].src}  type="video/mp4"/>
-                    </video>
+                    {
+                        video[index]
+                    }
                     <br/>
                     <br/>
                     <h1>
@@ -75,7 +95,8 @@ const Project = () => {
                         {data[index].description}
                     </p>
                     <br/>
-                    <Button color={"primary"} variant={"contained"} disableElevation href={data[index].resources}>Download Me</Button>
+                    <Button color={"primary"} variant={"contained"} disableElevation href={data[index].resources}>Download
+                        Me</Button>
                     <br/>
                     <br/>
                 </Grid>
