@@ -320,8 +320,4 @@ const Home = ({ className = '' }: PortfolioProps) => {
   );
 };
 
-export async function loader({ request }: Route.LoaderArgs) {
-  return { message: "Hello World" };
-}
-
 export default Home;
