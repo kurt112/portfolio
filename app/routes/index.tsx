@@ -60,7 +60,7 @@ const Home = ({ className = '' }: PortfolioProps) => {
   const [displayIndex, setDisplayIndex] = useState(0);
 
   const [root, setRoot] = useState<HTMLDivElement | null>(null);
-  const [theme, setTheme] = useState<'light' | 'dark' | null>(null);
+  const [theme, setTheme] = useState<'light' | 'dark' | null>('dark');
   const [tech, setTech] = useState<string | null>(null);
   const [drag, setDrag] = useState<DragState | null>(null);
   const dragStart = useRef<DragStart | null>(null);
