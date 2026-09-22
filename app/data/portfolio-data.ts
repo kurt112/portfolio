@@ -29,7 +29,7 @@ export interface Project {
 export const skills: [group: string, items: string[]][] = [
     ['Languages', ['Java', 'JavaScript', 'Python', 'C++', 'PHP', 'Go']],
     ['Backend', ['Spring Boot', 'Spring MVC', 'JAX-RS', 'Hibernate', 'Node.js', 'Express', 'Fastify', 'GraphQL', 'Socket.IO', 'Keycloak']],
-    ['Frontend', ['Angular', 'React', 'React Native', 'Vue', 'HTML', 'CSS', 'Bootstrap', 'MUI']],
+    ['Frontend', ['Angular', 'React', 'React Native', 'Ionic', 'Vue', 'HTML', 'CSS', 'Bootstrap', 'MUI']],
     ['Messaging & delivery', ['Apache Kafka', 'RabbitMQ', 'Docker', 'Kubernetes', 'Argo CD', 'KEDA', 'Jenkins', 'Maven', 'Gradle']],
     ['Data & observability', ['SQL', 'MySQL', 'Firebase', 'Grafana', 'Prometheus', 'Kibana']],
     ['AI tooling', ['Claude', 'ChatGPT', 'Gemini', 'n8n', 'Hugging Face', 'Ollama']],
@@ -43,16 +43,28 @@ export const strengths: [string, string][] = [
 
 export const roles: Role[] = [
     {
-        org: 'NCS', title: 'Senior Full-stack Software Engineer', when: 'Aug 2025 – Present',
-        tech: ['Java', 'Spring Boot'],
+        org: 'Independent / Freelance', title: 'Full-Stack Web & Software Developer', when: 'Aug 2025 – Present',
+        tech: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'TypeScript', 'Docker', 'React', 'Angular', 'Ionic'],
         pts: [
-            'Manage microservices handling 300k+ daily transactions, and mentor three junior and one mid-level developer.',
-            'Lead end-to-end design, development and production deployment of frontend and backend features in Java and Spring Boot.',
-            'Standardise operating procedures and refactor codebase patterns to improve stability and maintainability.',
-            'Write unit test suites that enforce code coverage before staging and release.',
-            'Run multi-environment deployments against delivery timelines and budget constraints.',
+            'Delivered custom end-to-end web applications and backend solutions for diverse client projects.',
+            'Architected database schemas and integrated secure RESTful APIs for client business platforms.',
+            'Consulted directly with stakeholders to gather technical requirements, define scope, and execute milestones.',
+            'Implemented payment gateway integrations, authentication mechanisms, and role-based access control.',
+            'Configured cloud hosting, CI/CD deployment workflows, and automated backup schedules for production builds.',
+            'Provided post-launch technical support, performance tuning, and code maintenance across client systems.',
         ],
     },
+    // {
+    //     org: 'NCS', title: 'Senior Full-stack Software Engineer', when: 'Aug 2025 – Present',
+    //     tech: ['Java', 'Spring Boot'],
+    //     pts: [
+    //         'Manage microservices handling 300k+ daily transactions, and mentor three junior and one mid-level developer.',
+    //         'Lead end-to-end design, development and production deployment of frontend and backend features in Java and Spring Boot.',
+    //         'Standardise operating procedures and refactor codebase patterns to improve stability and maintainability.',
+    //         'Write unit test suites that enforce code coverage before staging and release.',
+    //         'Run multi-environment deployments against delivery timelines and budget constraints.',
+    //     ],
+    // },
     {
         org: 'Genpact Services LLC', title: 'Consultant (project-based)', when: 'Mar 2025 – Aug 2025',
         tech: ['Java', 'Spring Boot', 'Spring MVC', 'JAX-RS', 'Docker', 'Kubernetes', 'Apache Kafka', 'RabbitMQ', 'Jenkins'],
